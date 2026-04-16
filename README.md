@@ -21,7 +21,7 @@ This will compile the Doolang code and generate the binary in the `output` folde
 ### 2. Run the built binary
 
 ```bash
-./output
+./output.exe
 ```
 
 Execute the compiled binary to start the server on `http://localhost:4000`.
@@ -42,7 +42,10 @@ wrk -t10 -c900 -d30s --latency http://localhost:4000/plaintext
 wrk -t10 -c900 -d30s --latency http://localhost:4000/json
 ```
 
-**Note:** Keep the server running while executing the benchmarks in a separate terminal.
+### Example Benchmark Results
+
+![Benchmark Results](images/doo-benchmark-result.png)
+
 
 ## Benchmark Configuration
 
@@ -50,3 +53,11 @@ wrk -t10 -c900 -d30s --latency http://localhost:4000/json
 - **Connections (-c)**: 900
 - **Duration (-d)**: 30 seconds
 - **Latency**: Enabled
+
+
+## Notes
+
+> **Local Machine Benchmark**
+> These results were measured on a local development machine using a release build compiled with LLVM optimizations.
+> Results will vary based on CPU, memory, OS, and available system resources.
+> Linux is recommended for best performance. Windows results may differ due to syscall overhead.
