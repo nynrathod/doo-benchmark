@@ -1,0 +1,13 @@
+# DooCloud Server defaults
+output
+output.exe
+*.ll
+*.lib
+*.txt
+*.log
+*.map
+std/
+packages/
+*.o
+.env
+.doo-cache/

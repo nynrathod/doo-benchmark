@@ -1,0 +1,20 @@
+import std::Http::Server;
+
+struct Message { message: Str }
+
+fn jsonHandler() -> Message {
+    return Message { message: "Hello, World!" };
+}
+
+fn plainHandler() -> Str {
+    return "hello";
+}
+
+fn main() {
+    let app = Server::new(":4000");
+
+    app.get("/plaintext", plainHandler);
+    app.get("/json", jsonHandler);
+
+    app.start();
+}
