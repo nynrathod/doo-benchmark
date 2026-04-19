@@ -10,7 +10,13 @@ Make sure **Doolang** is installed before running this benchmark. Follow the ins
 
 ## Running the Benchmark
 
-### 1. Build the project
+### 1. Navigate to the doo directory
+
+```bash
+cd doo
+```
+
+### 2. Build the project
 
 ```bash
 doo build
@@ -18,7 +24,7 @@ doo build
 
 This will compile the Doolang code and generate the binary in the `output` folder.
 
-### 2. Run the built binary
+### 3. Run the built binary
 
 ```bash
 ./output.exe
@@ -28,7 +34,7 @@ Execute the compiled binary to start the server on `http://localhost:4000`.
 
 > **Note:** It is recommended to run the benchmark on a Linux system for optimal results.
 
-### 3. Run benchmarks
+### 4. Run benchmarks
 
 In a separate terminal, use `wrk` to run the benchmarks:
 
@@ -42,7 +48,7 @@ wrk -t10 -c900 -d30s --latency http://localhost:4000/plaintext
 wrk -t10 -c900 -d30s --latency http://localhost:4000/json
 ```
 
-### Example Benchmark Results
+### 5. Example Benchmark Results
 
 ![Benchmark Results](images/doo-benchmark-result.png)
 

@@ -11,7 +11,7 @@ fn plainHandler() -> Str {
 }
 
 fn main() {
-    let app = Server::new(":4000");
+    let app = Server::new(":3000");
 
     app.get("/plaintext", plainHandler);
     app.get("/json", jsonHandler);

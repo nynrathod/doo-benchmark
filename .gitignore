@@ -11,3 +11,6 @@ packages/
 *.o
 .env
 .doo-cache/
+node_modules/
+dist/
+__pycache__/
